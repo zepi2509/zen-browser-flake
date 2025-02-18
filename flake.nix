@@ -1,8 +1,8 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    appimage-file-beta = {
-      url = "https://github.com/zen-browser/desktop/releases/download/1.7.3b/zen-x86_64.AppImage";
+    appimage-file-latest= {
+      url = "https://github.com/zen-browser/desktop/releases/download/latest/zen-x86_64.AppImage";
       flake = false;
     };
     appimage-file-twilight = {
@@ -15,11 +15,8 @@
     packages = builtins.listToAttrs (map (system: {
         name = system;
         value = with import nixpkgs { inherit system; config.allowUnfree = true;}; rec {
-
-          zen-beta-appimage = pkgs.callPackage (import ./zen-browser/appimage-default.nix) { src = inputs.appimage-file-beta; pname = "zen"; version = "beta"; };
-
-          zen-twilight-appimage = pkgs.callPackage (import ./zen-browser/appimage-default.nix) { src = inputs.appimage-file-twilight; pname = "zen"; version = "twilight"; };
-
+          twilight = pkgs.callPackage (import ./zen-browser/appimage-default.nix) { src = inputs.appimage-file-twilight; pname = "zen"; version = "twilight"; };
+          latest = pkgs.callPackage (import ./zen-browser/appimage-default.nix) { src = inputs.appimage-file-beta; pname = "zen"; version = "beta"; };
           default = zen-beta-appimage;
         };
       })[ "x86_64-linux" ]);
