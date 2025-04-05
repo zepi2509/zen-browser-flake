@@ -3,7 +3,7 @@
     "appimage-file-latest": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-X72Xc/IBgcPN7wM0rxokqQl1s8l0MoM2TPgAZlwNU0w=",
+        "narHash": "sha256-dJ673HZjd+iRVcZRIJPa5SbsMp2i5lPME2PPKhoMdNY=",
         "type": "file",
         "url": "https://github.com/zen-browser/desktop/releases/latest/download/zen-x86_64.AppImage"
       },
@@ -15,7 +15,7 @@
     "appimage-file-twilight": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-GEhvmFIlu6qH8HPWKmxWc3LDTzNobxeky/PbzzIg1Jg=",
+        "narHash": "sha256-bPq4Z0mYBd4XM1goL90FqEjKoyMIrAoomOqXzsL5YgM=",
         "type": "file",
         "url": "https://github.com/zen-browser/desktop/releases/download/twilight/zen-x86_64.AppImage"
       },
@@ -26,11 +26,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1743315132,
-        "narHash": "sha256-6hl6L/tRnwubHcA4pfUUtk542wn2Om+D4UnDhlDW9BE=",
+        "lastModified": 1743583204,
+        "narHash": "sha256-F7n4+KOIfWrwoQjXrL2wD9RhFYLs2/GGe/MQY1sSdlE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "52faf482a3889b7619003c0daec593a1912fddc1",
+        "rev": "2c8d3f48d33929642c1c12cd243df4cc7d2ce434",
         "type": "github"
       },
       "original": {
